@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "ept-transform/fancy-nav",
+    "title" : "Fancy Navigation",
+    "category" : "text",
+    "icon" : "star-filled",
+    "description": "Adds a navigation menu that can accept different blocks other than just links.",
+    "keywords": ["navigation", "underline", "hover"],
+    "version":"1",
+    "textdomain":"e-potis",
+    "attributes": {
+        "items": {
+            "type" : "number",
+            "default": 4
+        },
+        "sub": {
+            "type":"boolean",
+            "default":false
+        },
+        "underline_color":{
+            "type":"string",
+            "default":"#f87171"
+        },
+        "text_color":{
+            "type":"string",
+            "default":"#fff"
+        },
+        "font_family":{
+            "type":"string",
+            "default":"Rubik, sans-serif"
+        }
+    },
+    "editorScript":"file:./index.js",
+    "viewScript":"file:./frontend.js",
+    "style":"file:./index.css",
+    "providesContext":{
+        "ept-transform/text_color" : "text_color",
+        "ept-transform/underline_color":"underline_color",
+        "ept-transform/font_family":"font_family"
+    }
+          
+}

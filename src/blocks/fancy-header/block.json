@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "ept-transform/fancy-header",
+    "title" : "Fancy Header",
+    "category" : "text",
+    "icon" : "star-filled",
+    "description": "Adds a header with a hover effect.",
+    "keywords": ["header", "underline", "hover"],
+    "version":"1",
+    "textdomain":"e-potis",
+    "editorScript": "file:./index.js",
+    "attributes": {
+        "content": {
+            "type" : "string",
+            "source" : "html",
+            "selector": "h2"
+        },
+        "underline_color":{
+            "type":"string",
+            "default":"#f87171"
+        },
+        "text_color":{
+            "type":"string",
+            "default":"#fff"
+        }, 
+        "link_address":{
+            "type":"string",
+            "default":"#"
+        },
+        "sub":{
+            "type":"boolean",
+            "default":false
+        },
+        "font_family":{
+            "type":"string",
+            "default":"Pacifico, sans-serif"
+        }
+    },
+    "style":"file:./index.css",
+    "usesContext": [
+        "ept-transform/text_color", 
+        "ept-transform/underline_color",
+        "ept-transform/font_family"
+    ]
+}

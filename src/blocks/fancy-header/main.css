@@ -1,0 +1,53 @@
+/* Fancy Header */
+
+
+.wp-block-ept-transform-fancy-header .fancy-header {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-bottom-width: 0px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    background-size: 0 3px;
+    font-size: 1.875rem;
+    
+    transition: background-size .5s ease-in-out
+  }
+  
+  .wp-block-ept-transform-fancy-header .fancy-header:hover {
+    background-position: bottom;
+    background-size: 100% 3px
+  }
+
+  .wp-block-ept-transform-fancy-header{
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .wp-block-ept-transform-fancy-header .dropdown-content {
+    display:none;
+    position: absolute;
+    background-color: var(--wp--preset--color--ept-background-color);
+    min-width:150px;
+    z-index: 10;
+  }
+  
+  .wp-block-ept-transform-fancy-header .dropdown-content .wp-block-ept-transform-fancy-header {
+    padding-bottom:1rem;
+
+  }
+  .wp-block-ept-transform-fancy-header .dropdown-content .wp-block-ept-transform-fancy-header h2.fancy-header{
+    font-size:1.2rem !important;
+  }
+  .wp-block-ept-transform-fancy-header .dropdown-content {
+    margin-right:2rem;
+    padding-top:.7rem;
+  }
+  .wp-block-ept-transform-fancy-header:hover .dropdown-content {
+    display:flex;
+    flex-direction: column;
+    
+
+  }
