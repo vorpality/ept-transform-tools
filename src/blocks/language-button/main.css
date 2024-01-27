@@ -7,7 +7,7 @@ color:white;
 }
 
 .wp-block-ept-transform-language-button .dropbtn>button {
-  background-color: var(--wp--preset--color--ept-background-color);
+  background-color: var(--wp--preset--color--ept-backgroung-color);
   color:white;
   padding-left: 0.25rem;
   padding-top: 0.55rem;

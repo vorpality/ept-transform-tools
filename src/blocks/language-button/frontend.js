@@ -3,22 +3,29 @@ import { createRoot } from "react-dom/client";
 
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.wp-block-ept-transform-language-button li.lang')
-    const langCookieIndex =(document.cookie.indexOf("wp_lang="))
-    let langCookie = document.cookie.substring(langCookieIndex + 8, langCookieIndex + 13);
-    langCookie = (langCookie.slice(2, 3) == ';') ? langCookie.slice(0,2) : langCookie
+    const langCookieIndex =(document.cookie.indexOf("wp_lang="));
+    let langCookie;
+    if (langCookieIndex == -1)
+    {
+        const browser_locale = navigator.language || navigator.userLanguage;
+        langCookie = browser_locale;
+    }
+    else {
+        langCookie = document.cookie.substring(langCookieIndex + 8, langCookieIndex + 13);
+        langCookie = (langCookie.slice(2, 3) == ';') ? langCookie.slice(0,2) : langCookie
 
+    }
     const languages = [];
     let activeLanguage;
 
+
     buttons.forEach(button =>{
         if (langCookie!=button.getAttribute("slang")){
-            languages.push({"name":button.getAttribute("name"), "slang":button.getAttribute("slang")})
+            languages.push({"name":button.getAttribute("name"), "slang":button.getAttribute("slang")});
         }
         else {
             activeLanguage={"name":button.getAttribute("name"), "slang":button.getAttribute("slang")}
         }
-        
-
         
     })
     const rootEl = document.querySelector('.wp-block-ept-transform-language-button');
