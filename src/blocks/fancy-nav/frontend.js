@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.cookie.indexOf("lang=") >= 0) {
             const langStr = document.cookie.indexOf("wp_lang=");
             if(document.cookie.substring(langStr + 8, langStr + 10)=='el'){
-                //console.log(header.parentElement.href);
-                console.log("x " + window.location.origin);
                 switch(header.innerHTML){
                     case "Home" : 
                         header.innerHTML = 'Αρχική';
