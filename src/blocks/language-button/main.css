@@ -7,7 +7,7 @@ color:white;
 }
 
 .wp-block-ept-transform-language-button .dropbtn>button {
-  background-color: var(--wp--preset--color--ept-backgroung-color);
+  background-color: var(--ept-background); 
   color:white;
   padding-left: 0.25rem;
   padding-top: 0.55rem;
@@ -30,7 +30,7 @@ text-decoration: underline;
 .wp-block-ept-transform-language-button .dropdown-content {
   display: none;
   margin-left:.5rem;
-  background-color: var(--wp--preset--color--ept-background-color);
+  background-color: var(--ept-background);  
   padding:.2rem;
   padding-bottom:.1rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -46,7 +46,7 @@ text-decoration: underline;
 }
 
 .wp-block-ept-transform-language-button .button-element{
-  background-color:var(--wp--preset--color--ept-background-color);
+  background-color:var(--ept-background);
   color:#f1f1f1;
   padding:3px;
 }
