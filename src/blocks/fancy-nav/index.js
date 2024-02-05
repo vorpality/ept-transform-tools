@@ -56,8 +56,8 @@ registerBlockType(block.name, {
         </InspectorControls>
         <div {...blockProps}>
           <button 
-            class="mobile-button">
-          <i class="bi bi-list mobile-button"></i>
+            className="mobile-button">
+          <i className="bi bi-list mobile-button"></i>
           </button>
           <div className='nav-content'>
             <InnerBlocks
